@@ -7,7 +7,7 @@ cd /home/prénom/.../Web
 (Web est le nom du répertoire)
 
 3) cloner le fichiers existants sur le dépôt dans le répertoire : 
-git clone https://github.com/grainedesesame/WEB-groupe6 
+git clone https://github.com/grainedesesame/WEB-groupe6.git
 
 
 Commandes usuelles : 
