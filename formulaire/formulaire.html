@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<script src="jquery-3.6.0.min.js"></script>
+
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -73,6 +75,29 @@
 
 </style>
 
+<script>
+
+    $(document).ready(function(){
+        $(".champClient").hide();
+        $(".champPrestataire").hide();
+    });
+
+    function select(value){
+        if (value=="Prestataire"){
+            $(".champPrestataire").show();
+            $(".champClient").hide();
+        }
+        else if (value=="Client"){
+            $(".champClient").show();
+            $(".champPrestataire").hide();
+        }
+        else{
+            $(".champClient").hide();
+            $(".champPrestataire").hide();
+        }
+    }
+
+</script>
 
 <body>
 <div id="formulaire">
@@ -80,7 +105,7 @@
 
     <div class="champCommun">
         <label for="service">Vous souhaitez vous inscrire en tant que </label>
-        <select  name="service" id="service"></br>
+        <select  name="service" id="service" onchange="select(this.value)"></br>
             <option selected="selected"> Aucun choix sélectionné</option>
             <option> Prestataire </option>
             <option> Client </option>
