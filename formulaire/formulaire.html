@@ -44,7 +44,7 @@
         display: block;
     }
     .champClient{
-        display:block;
+        display:none;
     }
     .champPrestataire{
         display: none;
@@ -91,9 +91,22 @@
             $(".champClient").show();
             $(".champPrestataire").hide();
         }
-        else{
-            $(".champClient").hide();
-            $(".champPrestataire").hide();
+        //else{
+         //   $(".champClient").hide();
+         //   $(".champPrestataire").hide();
+        //}
+    }
+
+    function select2(value){
+        if (value=="Particulier"){
+            console.log("particulier");
+            $("#particulier").show();
+            $("#entreprise").hide();
+        }
+        else {
+            console.log("entreprise");
+            $("#particulier").hide();
+            $("#entreprise").show();
         }
     }
 
@@ -115,7 +128,7 @@
     <div class="champClient">
         <label for="service">Vous êtes</label>
 
-        <select  name="statut" id="statut">
+        <select  name="statut" id="statut" onchange="select2(this.value)">
             <option selected="selected"> Aucun choix sélectionné</option>
             <option > Particulier </option>
             <option> Entreprise/Association </option>
