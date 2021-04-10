@@ -4,82 +4,151 @@
     <meta charset="UTF-8">
     <title>Formulaire d'inscription</title>
 </head>
+
+<style>
+    /*Mise en page générale*/
+    body{
+        margin: auto;
+        max-width: 1000px;
+        text-align: center;
+
+    }
+    h1{
+        text-align: center;
+        margin:50px;
+    }
+    #formulaire{
+        margin-top:30px;
+        padding:30px;
+        border-style: solid;
+        border-color:lightgray;
+        border-width: 1px;
+        position: absolute;
+        box-shadow: 2px 2px 5px ;
+        color: darkslategrey;
+        max-width: 1000px;
+    }
+     input {
+         margin:5px;
+     }
+
+    /*Affichage par blocs*/
+    .champCommun{
+        display: block;
+    }
+    .champClient{
+        display:block;
+    }
+    .champPrestataire{
+        display: none;
+    }
+    label{
+        display:inline-block;
+        width: 320px;
+        text-align: left;
+
+    }
+    input{
+        display: inline-block;
+        width:350px;
+    }
+    select{
+        width: 360px;
+        margin-right:10px;
+        margin-left:10px;
+        vertical-align: top;
+    }
+
+    #envoyer{
+        display: inline-block;
+        width:100px;
+        margin-top:70px;
+        horiz-align: right;
+    }
+
+</style>
+
+
 <body>
-<h1> Formulaire d'inscription </h1>
+<div id="formulaire">
+    <h1> Formulaire d'inscription </h1>
 
-<div class="champCommun">
-    <label for="service">Vous souhaitez vous inscrire en tant que </label>
-    <select  name="service" id="service">
-        <option selected="selected"> Aucun choix sélectionné</option>
-        <option> Prestataire </option>
-        <option> Client </option>
-    </select>
-</div>
-
-<div class="champClient">
-    <label for="service">Vous êtes</label>
-
-    <select  name="statut" id="statut">
-        <option selected="selected"> Aucun choix sélectionné</option>
-        <option > Particulier </option>
-        <option> Entreprise/Association </option>
-    </select>
-</div>
-
-<div class="champClient" id="particulier">
-    <label for="nom"> Nom </label>
-    <input id="nom" type="text" />
-    <label for="prenom"> Prénom </label>
-    <input id="prenom" type="text" />
-</div>
-
-<div class="champClient" id="entreprise">
-    <label for="nomEntreprise"> Nom de l'entreprise/association</label>
-    <input id="nomEntreprise" type="text" />
-</div>
-<div class="champPrestataire">
-    <label for="nomScene"> Nom de scène </label>
-    <input id="nomScene" type="text" />
-    <label for="nomScene"> Nombre de personnes </label>
-    <input id="nombre" type="text" />
-    <div id="membres">
-        <label for="nom1"> Nom du membre 1 </label>
-        <input id="nom1" type="text" />
-        <label for="prenom1"> Prénom du membre 1 </label>
-        <input id="prenom1" type="text" />
+    <div class="champCommun">
+        <label for="service">Vous souhaitez vous inscrire en tant que </label>
+        <select  name="service" id="service"></br>
+            <option selected="selected"> Aucun choix sélectionné</option>
+            <option> Prestataire </option>
+            <option> Client </option>
+        </select>
     </div>
-</div>
 
-<div class="champCommun">
-    <div id="coordonnees">
-        <label for="voie"> N° et voie </label>
-        <input id="voie" type="text"/>
-        <label for="codePostal"> Code postal </label>
-        <input id="codePostal" type="text" />
-        <label for="ville"> Ville </label>
-        <input id="ville" type="text" />
-        <label for="tel"> Téléphone </label>
-        <input id="tel" type="text" />
-        <label for="mail"> Adresse électronique </label>
-        <input id="mail" type="text" />
+    <div class="champClient">
+        <label for="service">Vous êtes</label>
+
+        <select  name="statut" id="statut">
+            <option selected="selected"> Aucun choix sélectionné</option>
+            <option > Particulier </option>
+            <option> Entreprise/Association </option>
+        </select>
     </div>
-    <div id="profil">
-        <label for="pseudo"> Identifiant/pseudo </label>
-        <input id="pseudo" type="text" />
-        <label for="password">Mot de passe </label>
-        <input type="password" id="password" name="pwd">
-        <!-- Insérer une photo -->
+
+    <div class="champClient" id="particulier">
+        <label for="nom"> Nom </label>
+        <input id="nom" type="text" />
+        <label for="prenom"> Prénom </label>
+        <input id="prenom" type="text" />
     </div>
-</div>
 
-<div class="champPrestataire">
-    <label for="domaines"> Domaines de compétence (mots clé)</label>
-    <input id="domaines" type="text" />
-</div>
+    <div class="champClient" id="entreprise">
+        <label for="nomEntreprise"> Nom de l'entreprise/association</label>
+        <input id="nomEntreprise" type="text" />
+    </div>
+    <div class="champPrestataire">
+        <label for="nomScene"> Nom de scène </label>
+        <input id="nomScene" type="text" />
+        <label for="nomScene"> Nombre de personnes </label>
+        <input id="nombre" type="text" />
+        <div id="membres">
+            <label for="nom1"> Nom du membre 1 </label>
+            <input id="nom1" type="text" />
+            <label for="prenom1"> Prénom du membre 1 </label>
+            <input id="prenom1" type="text" />
+        </div>
+    </div>
 
-<div class="champClient>
-     <label for="preferences"> Préférences (mots clé)</label>
-<input id="preferences" type="text" />
+    <div class="champCommun">
+        <div id="coordonnees">
+            <label for="voie"> N° et voie </label>
+            <input id="voie" type="text"/>
+            <label for="codePostal"> Code postal </label>
+            <input id="codePostal" type="text" />
+            <label for="ville"> Ville </label>
+            <input id="ville" type="text" />
+            <label for="tel"> Téléphone </label>
+            <input id="tel" type="text" />
+            <label for="mail"> Adresse électronique </label>
+            <input id="mail" type="text" />
+        </div>
+        <div id="profil">
+            <label for="pseudo"> Identifiant/pseudo </label>
+            <input id="pseudo" type="text" />
+            <label for="password">Mot de passe </label>
+            <input type="password" id="password" name="pwd">
+            <!-- Insérer une photo -->
+        </div>
+    </div>
+
+    <div class="champPrestataire">
+        <label for="domaines"> Domaines de compétence (mots clé)</label>
+        <input id="domaines" type="text" />
+    </div>
+
+    <div class="champClient">
+         <label for="preferences" > Préférences (mots clé)</label>
+         <input id="preferences" type="text" />
+    </div>
+
+    <input id="envoyer" type="submit"/>
 </div>
 </body>
 </html>
