@@ -103,10 +103,14 @@
             $("#particulier").show();
             $("#entreprise").hide();
         }
-        else {
+        else if (value=="Entreprise/Association") {
             console.log("entreprise");
             $("#particulier").hide();
             $("#entreprise").show();
+        }
+        else {
+            $("#particulier").hide();
+            $("#entreprise").hide();
         }
     }
 
