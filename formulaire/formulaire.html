@@ -5,6 +5,81 @@
     <title>Formulaire d'inscription</title>
 </head>
 <body>
+<h1> Formulaire d'inscription </h1>
 
+<div class="champCommun">
+    <label for="service">Vous souhaitez vous inscrire en tant que </label>
+    <select  name="service" id="service">
+        <option selected="selected"> Aucun choix sélectionné</option>
+        <option> Prestataire </option>
+        <option> Client </option>
+    </select>
+</div>
+
+<div class="champClient">
+    <label for="service">Vous êtes</label>
+
+    <select  name="statut" id="statut">
+        <option selected="selected"> Aucun choix sélectionné</option>
+        <option > Particulier </option>
+        <option> Entreprise/Association </option>
+    </select>
+</div>
+
+<div class="champClient" id="particulier">
+    <label for="nom"> Nom </label>
+    <input id="nom" type="text" />
+    <label for="prenom"> Prénom </label>
+    <input id="prenom" type="text" />
+</div>
+
+<div class="champClient" id="entreprise">
+    <label for="nomEntreprise"> Nom de l'entreprise/association</label>
+    <input id="nomEntreprise" type="text" />
+</div>
+<div class="champPrestataire">
+    <label for="nomScene"> Nom de scène </label>
+    <input id="nomScene" type="text" />
+    <label for="nomScene"> Nombre de personnes </label>
+    <input id="nombre" type="text" />
+    <div id="membres">
+        <label for="nom1"> Nom du membre 1 </label>
+        <input id="nom1" type="text" />
+        <label for="prenom1"> Prénom du membre 1 </label>
+        <input id="prenom1" type="text" />
+    </div>
+</div>
+
+<div class="champCommun">
+    <div id="coordonnees">
+        <label for="voie"> N° et voie </label>
+        <input id="voie" type="text"/>
+        <label for="codePostal"> Code postal </label>
+        <input id="codePostal" type="text" />
+        <label for="ville"> Ville </label>
+        <input id="ville" type="text" />
+        <label for="tel"> Téléphone </label>
+        <input id="tel" type="text" />
+        <label for="mail"> Adresse électronique </label>
+        <input id="mail" type="text" />
+    </div>
+    <div id="profil">
+        <label for="pseudo"> Identifiant/pseudo </label>
+        <input id="pseudo" type="text" />
+        <label for="password">Mot de passe </label>
+        <input type="password" id="password" name="pwd">
+        <!-- Insérer une photo -->
+    </div>
+</div>
+
+<div class="champPrestataire">
+    <label for="domaines"> Domaines de compétence (mots clé)</label>
+    <input id="domaines" type="text" />
+</div>
+
+<div class="champClient>
+     <label for="preferences"> Préférences (mots clé)</label>
+<input id="preferences" type="text" />
+</div>
 </body>
 </html>
