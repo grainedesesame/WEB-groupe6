@@ -1,0 +1,18 @@
+.intercalaire{
+    border-style: solid;
+    flex-wrap: wrap;
+    padding: 3% 10%;
+    margin-left:200px;
+    margin-right: 30px;
+}
+
+label{
+    display:inline-block;
+    width:40%;
+    text-align: left;
+}
+input[type="text"], #password {
+    display: inline-block;
+    width:350px;
+    margin-bottom: 10px;
+}

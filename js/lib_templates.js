@@ -1,4 +1,6 @@
 /* librairie destinées aux pages de template */
+
+
 /* Redirections */
 function rdFormulaire(){
     $(location).attr('href', "./formulaire.html");
