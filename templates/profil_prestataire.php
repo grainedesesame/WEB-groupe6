@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Profil </title>
-</head>
-<body>
+<?php
+// Si la page est appelée directement par son adresse, on redirige en passant pas la page index
+if (basename($_SERVER["PHP_SELF"]) != "index.php")
+{
+	header("Location:../index.php");
+	die("");
+}
+?>
 
 <h1>Mon profil</h1>
 
@@ -33,5 +34,3 @@
 </div>
 
 <input type="submit" value="Enregistrer les modifications">
-</body>
-</html>
