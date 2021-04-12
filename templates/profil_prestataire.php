@@ -7,6 +7,15 @@
 </head>
 <body>
 
+<div id="remplissage" class="intercalaire">
+    <div id="coord" class="marquepage" onclick="afficherProfil();">
+        Mes coordonnées
+    </div>
+    <div id="proj" class="marquepage" onclick="afficherProjets();">
+        Mes projets
+    </div>
+</div>
+
 <h1>Mon profil</h1>
 
 <div id="coordonnees" class="intercalaire">
