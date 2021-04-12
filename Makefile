@@ -19,7 +19,7 @@ install:
 	<VirtualHost *:$(SERVER_PORT)> \n\
 		DocumentRoot $(SERVER_DIR) \n\
 		<Directory \"$(SERVER_DIR)\"> \n\
-			Options +FollowSymLinks \n\
+			Options Indexes FollowSymLinks \n\
 			AllowOverride all \n\
 			Require all granted \n\
 		</Directory> \n\
