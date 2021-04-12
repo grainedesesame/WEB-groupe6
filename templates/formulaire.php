@@ -1,16 +1,12 @@
 <?php
-
+// Si la page est appelée directement par son adresse, on redirige en passant pas la page index
+if (basename($_SERVER["PHP_SELF"]) != "index.php")
+{
+	header("Location:../index.php");
+	die("");
+}
 ?>
-<head>
-    <meta charset="UTF-8">
-    <title>Formulaire d'inscription</title>
-</head>
-<script src="../jquery-3.6.0.min.js">
-</script>
 
-<script>
-    
-</script>
 <style>
     /*Mise en page générale*/
     body{
