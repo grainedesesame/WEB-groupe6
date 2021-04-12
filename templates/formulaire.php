@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+<?php
 
-<html lang="fr">
+?>
 <head>
     <meta charset="UTF-8">
     <title>Formulaire d'inscription</title>
@@ -234,4 +234,3 @@
     <input id="envoyer" type="submit"/>
 </div>
 </body>
-</html>
