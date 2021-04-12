@@ -1,1 +1,8 @@
-in progress!
+RewriteEngine on
+
+RewriteRule ^(-[a-z]*)$ /index.php?view=$1 [L]
+
+# Lorsque l'on tape dans la barre d'adresse www.example.com/* c'est la page www.example.com/index.php?view=* qui s'affiche
+# ^ et $ dans le bloc modèle signifient respectivement le début et la fin d'une ligne.
+# $1 est une variable qui récupère la valeur entre les premières parenthèses du bloc modèle
+# [L]=[last] signifie que si cette règle s'applique on n'en cherche pas d'autre
