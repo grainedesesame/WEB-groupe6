@@ -12,6 +12,9 @@
     function rdFormulaire(){
         $(location).attr('href', "../formulaire/formulaire.html");
     }
+    function rdAccueil(){
+        $(location).attr('href', "../accueil/accueil.html");
+    }
 </script>
 
 <style>
@@ -56,13 +59,14 @@
     }
 
     #blocForm{
-        border-top-style: solid;
+        border-top-style: dashed;
+        border-width: 1px;
         margin-top:20px;
         padding-top:20px;
         border-color: darkslategrey;
     }
 
-    #formulaire, #connexion {
+    #formulaire, #connexion, #retour {
         background-color: dimgrey;
         color: white;
         padding: 12px 20px;
@@ -70,8 +74,14 @@
         border-radius: 4px;
         cursor: pointer;
     }
-    #connexion:hover, #formulaire:hover {
+    #connexion:hover, #formulaire:hover, #retour:hover {
         background-color: black;
+    }
+    #retour{
+        position: absolute;
+        left:10%;
+        top:10%;
+        width:200px;
     }
 </style>
 <body>
@@ -79,7 +89,8 @@
 <div id="page">
   <h1> Connexion </h1>
 
-  <label for="identifiant"> Identifiant</label>
+    <input id="retour" type="button" value="Retour à l'accueil" onclick="rdAccueil();"/>
+    <label for="identifiant"> Identifiant</label>
   <input id="identifiant" type="text" />
 
   <label for="password"> Mot de passe </label>
