@@ -4,6 +4,76 @@
     <meta charset="UTF-8">
     <title>Connexion</title>
 </head>
+
+<script src="../jquery-3.6.0.min.js">
+</script>
+
+<script>
+    function rdFormulaire(){
+        $(location).attr('href', "../formulaire/formulaire.html");
+    }
+</script>
+
+<style>
+    body{
+        margin: auto;
+        max-width: 800px;
+        text-align: center;
+    }
+    #page{
+        margin-top:30px;
+        margin-bottom:30px;
+        padding:30px;
+        border-style: solid;
+        border-color:lightgray;
+        border-width: 1px;
+        position: absolute;
+        left:20%;
+        right:20%;
+        top:20%;
+        box-shadow: 2px 2px 5px ;
+        color: darkslategrey;
+        max-width: 1000px;
+    }
+    input {
+        display: inline-block;
+        width:250px;
+        margin-bottom: 10px;
+        margin-left:-20px;
+    }
+    label{
+        display:inline-block;
+        width: 250px;
+        text-align: left;
+    }
+    #connexion{
+        horiz-align: center;
+        margin-top:30px;
+    }
+
+    #formulaire{
+        horiz-align: center;
+    }
+
+    #blocForm{
+        border-top-style: solid;
+        margin-top:20px;
+        padding-top:20px;
+        border-color: darkslategrey;
+    }
+
+    #formulaire, #connexion {
+        background-color: dimgrey;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    #connexion:hover, #formulaire:hover {
+        background-color: black;
+    }
+</style>
 <body>
 
 <div id="page">
@@ -15,7 +85,10 @@
   <label for="password"> Mot de passe </label>
   <input type="password" id="password" name="pwd">
 
-
+    <input type="submit" id="connexion" value="Se connecter"/></br>
+    <div id="blocForm">
+        <input type="button" id="formulaire" value="Créer un compte" onclick="rdFormulaire();"/>
+    </div>
 </div>
 </body>
 </html>
