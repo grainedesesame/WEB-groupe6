@@ -2,7 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="formulaire.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/form.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/connexion.css"/>
     <title>Connexion</title>
 </head>
 
@@ -17,18 +18,19 @@
 
 <div id="page">
   <h1> Connexion </h1>
+    <form>
+        <input id="retour" type="button" value="Retour à l'accueil" onclick="rdAccueil();"/>
+        <label for="identifiant"> Identifiant</label>
+      <input id="identifiant" type="text" />
 
-    <input id="retour" type="button" value="Retour à l'accueil" onclick="rdAccueil();"/>
-    <label for="identifiant"> Identifiant</label>
-  <input id="identifiant" type="text" />
+      <label for="password"> Mot de passe </label>
+      <input type="password" id="password" name="pwd">
 
-  <label for="password"> Mot de passe </label>
-  <input type="password" id="password" name="pwd">
-
-    <input type="submit" id="connexion" value="Se connecter"/></br>
-    <div id="blocForm">
-        <input type="button" id="formulaire" value="Créer un compte" onclick="rdFormulaire();"/>
-    </div>
+        <input type="submit" id="connexion" value="Se connecter"/></br>
+        <div id="blocForm">
+            <input type="button" id="formulaire" value="Créer un compte" onclick="rdFormulaire();"/>
+        </div>
+    </form>
 </div>
 </body>
 </html>
