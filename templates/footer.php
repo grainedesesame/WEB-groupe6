@@ -7,5 +7,7 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 }
 ?>
 
+Rien dans le pieds de page pour l'instant
+
 </body>
 </html>

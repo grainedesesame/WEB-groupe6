@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="../css/profil.css"/>
-  <title>Profil </title>
-</head>
-<body>
+<?php
+// Si la page est appelée directement par son adresse, on redirige en passant pas la page index
+if (basename($_SERVER["PHP_SELF"]) != "index.php")
+{
+	header("Location:../index.php");
+	die("");
+}
+?>
+
+<link rel="stylesheet" type="text/css" href="css/profil.css"/>
+
 
 <div id="remplissage" class="intercalaire">
     <div id="coord" class="marquepage" onclick="afficherProfil();">
@@ -44,5 +47,3 @@
 </div>
 
 <input type="submit" value="Enregistrer les modifications">
-</body>
-</html>

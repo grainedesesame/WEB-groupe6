@@ -1,20 +1,17 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../css/form.css"/>
-    <link rel="stylesheet" type="text/css" href="../css/connexion.css"/>
-    <title>Connexion</title>
-</head>
+<?php
+// Si la page est appelée directement par son adresse, on redirige en passant pas la page index
+if (basename($_SERVER["PHP_SELF"]) != "index.php")
+{
+	header("Location:../index.php");
+	die("");
+}
+?>
 
-<script src="../js/jquery-3.6.0.min.js">
-</script>
+<link rel="stylesheet" type="text/css" href="css/form.css"/>
+<link rel="stylesheet" type="text/css" href="css/connexion.css"/>
 
-<script src="../js/lib_templates.js">
-</script>
+<script src="js/lib_templates.js"></script>
 
-
-<body>
 
 <div id="page">
   <h1> Connexion </h1>
@@ -32,6 +29,4 @@
         </div>
     </form>
 </div>
-</body>
-</html>
 

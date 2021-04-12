@@ -11,12 +11,16 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 
 <html lang="fr">
 
-<script src="js/jquery-3.6.0.min.js"></script>
 
 <head>	
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15" />
-	<title>TinyMVC</title>
-	<link rel="stylesheet" type="text/css" href="css/topNav.css">
+	<?php
+	$title = valider("title"); 
+	if (!$title) $title = "Accueil"; 
+	echo "<title>$title</title>";
+	?>
+	<link rel="stylesheet" type="text/css" href="css/header.css">
+	<script src="js/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
