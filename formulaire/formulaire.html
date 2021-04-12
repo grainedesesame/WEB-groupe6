@@ -65,6 +65,15 @@
         vertical-align: top;
     }
 
+    .champ{
+        display: inline-block;
+        border-style: solid;
+        border-color:lightgray;
+        border-width: 1px;
+        width:370px;
+        height:100px;
+        border-radius:5px;
+    }
     #envoyer{
         display: inline-block;
         width:100px;
@@ -72,7 +81,7 @@
         horiz-align: right;
     }
 
-    input[type=submit] {
+    input[type=submit], #retour {
         background-color: dimgrey;
         color: white;
         padding: 12px 20px;
@@ -81,10 +90,15 @@
         cursor: pointer;
     }
 
-    input[type=submit]:hover {
+    input[type=submit]:hover, #retour:hover {
         background-color: black;
     }
-
+    #retour{
+        width:150px;
+        position: absolute;
+        left : 50px;
+        top : 70px;
+    }
 </style>
 
 <script>
@@ -126,15 +140,21 @@
         }
     }
 
+    function retourAccueil(){
+        $(location).attr('href', "../accueil/accueil.html");
+    }
+
 </script>
 
 <body>
 <div id="formulaire">
     <h1> Formulaire d'inscription </h1>
 
+    <input id="retour" type="button" value="Retour à l'accueil" onclick="retourAccueil();"/>
+
     <div class="champCommun">
         <label for="service">Vous souhaitez vous inscrire en tant que </label>
-        <select  name="service" id="service" onchange="select(this.value)"></br>
+        <select  name="service" id="service" onchange="select(this.value)">
             <option selected="selected"> Aucun choix sélectionné</option>
             <option> Prestataire </option>
             <option> Client </option>
@@ -165,12 +185,10 @@
     <div class="champPrestataire">
         <label for="nomScene"> Nom de scène </label>
         <input id="nomScene" type="text" />
-        <label for="nomScene"> Nombre de personnes </label>
-        <input id="nombre" type="text" />
         <div id="membres">
-            <label for="nom1"> Nom du membre 1 </label>
+            <label for="nom1"> Nom du référent </label>
             <input id="nom1" type="text" />
-            <label for="prenom1"> Prénom du membre 1 </label>
+            <label for="prenom1"> Prénom du référent </label>
             <input id="prenom1" type="text" />
         </div>
     </div>
@@ -199,12 +217,16 @@
 
     <div class="champPrestataire">
         <label for="domaines"> Domaines de compétence (mots clé)</label>
-        <input id="domaines" type="text" />
+        <div id="domaines" class="champ" contenteditable="true">
+        </div>
     </div>
 
     <div class="champClient">
          <label for="preferences" > Préférences (mots clé)</label>
-         <input id="preferences" type="text" />
+        <div id="preferences" class="champ" contenteditable="true">
+            test
+        </div>
+         <!--<input id="preferences" type="text" />-->
     </div>
 
     <input id="envoyer" type="submit"/>
