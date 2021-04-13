@@ -4,16 +4,13 @@ include_once("libs/maLibSQL.pdo.php");
 include_once("libs/maLibUtils.php");
 
 
-function searchPrestation($criteres,$date, $ville, $coutMin, $coutMax) //tableau de critere non vide
+function searchPrestation($criteres,$date, $ville, $coutMin, $coutMax) //tableau de criteres supposé non vide
 {
 
 }
 
-function checkLogin(){
-	if($passe==SQLGetChamp("SELECT passe FROM users WHERE pseudo='" . proteger($login) . "'"))
-	return SQLGetChamp("SELECT id FROM users WHERE pseudo='" . proteger($login) . "'");
-return false;
-}
+
+/* EXEMPLES REQUETES
 
 function verifBdd($criteres,$date, $ville, $coutMin, $coutMax) //tableau de critere non vide
 {
@@ -52,5 +49,6 @@ function listerMessages($idConv)
 
 }
 
-//test github nico
+*/
+
 ?>

@@ -1,0 +1,43 @@
+.intercalaire{
+    position:relative;
+    border-style: solid;
+    flex-wrap: wrap;
+    padding: 3% 10%;
+    margin-left:200px;
+    margin-right: 30px;
+}
+
+label{
+    display:inline-block;
+    width:40%;
+    text-align: left;
+}
+input[type="text"], #password {
+    display: inline-block;
+    width:50%;
+    margin-bottom: 10px;
+}
+
+.marquepage{
+    border-style: solid;
+    border-width: 1px;
+    width:150px;
+    height:30px;
+    line-height: 30px;
+    position:absolute;
+    left:-150px;
+}
+
+#coord{
+    top:2px;
+}
+
+#proj{
+    top:30px;
+}
+
+.marquepage:hover {
+    background-color: dimgrey;
+    color: white;
+    cursor: pointer;
+}

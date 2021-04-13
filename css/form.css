@@ -1,0 +1,53 @@
+body{
+    margin:auto;
+    max-width: 700px;
+    text-align: center;
+    background-color: dimgrey;
+}
+#page{
+    background-color: white;
+    display: block;
+    position: relative;
+    margin-top:10%;
+    padding:70px 30px 30px 30px;
+    border-style: solid;
+    border-color:lightgray;
+    border-width: 1px;
+    box-shadow: 2px 2px 5px ;
+    color: darkslategrey;
+}
+
+h1{
+    margin-bottom: 50px;
+}
+input[type="text"],input[type="password"] {
+    display: inline-block;
+    width:350px;
+    margin-bottom: 10px;
+}
+label{
+    display:inline-block;
+    width:40%;
+    text-align: left;
+}
+
+#retour{
+    position: absolute;
+    left:30px;
+    top:10%;
+}
+
+input[type="button"],input[type="submit"]{
+    background-color: dimgrey;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width:170px;
+}
+
+
+input[type="button"]:hover,input[type="submit"]:hover {
+    background-color: black;
+}
