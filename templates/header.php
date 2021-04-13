@@ -21,6 +21,7 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 	?>
 	<link rel="stylesheet" type="text/css" href="css/header.css">
 	<script src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../jquery.validate.min.js"></script>
 </head>
 
 <body>

@@ -11,7 +11,7 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 <link rel="stylesheet" type="text/css" href="css/formulaire.css"/>
 <script src="js/formulaire.js"></script>
 
-<div id="page">
+<form id="page">
     <h1> Formulaire d'inscription </h1>
 
     <input id="retour" type="button" value="Retour à l'accueil" onclick="retourAccueil();"/>
@@ -37,7 +37,7 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 
     <div class="champClient" id="particulier">
         <label for="nom"> Nom </label>
-        <input id="nom" type="text" />
+        <input id="nom" type="text" name="nom"/>
         <label for="prenom"> Prénom </label>
         <input id="prenom" type="text" />
     </div>
@@ -68,7 +68,7 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
             <label for="tel"> Téléphone </label>
             <input id="tel" type="text" />
             <label for="mail"> Adresse électronique </label>
-            <input id="mail" type="text" />
+            <input id="mail" name = "mail" type="text" />
         </div>
         <div id="profil">
             <label for="pseudo"> Identifiant/pseudo </label>
@@ -86,12 +86,12 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
     </div>
 
     <div class="champClient">
-         <label for="preferences" > Préférences (mots clé)</label>
+        <label for="preferences" > Préférences (mots clé)</label>
         <div id="preferences" class="champ" contenteditable="true">
             test
         </div>
-         <!--<input id="preferences" type="text" />-->
+        <!--<input id="preferences" type="text" />-->
     </div>
 
-    <input id="envoyer" type="submit"/>
-</div>
+    <input id="envoyer" type="submit" onclick="valider()"/>
+</form>
