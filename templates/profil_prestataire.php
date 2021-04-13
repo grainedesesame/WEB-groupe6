@@ -1,17 +1,17 @@
 <?php
 // Si la page est appelée directement par son adresse, on redirige en passant pas la page index
-/*if (basename($_SERVER["PHP_SELF"]) != "index.php")
+if (basename($_SERVER["PHP_SELF"]) != "index.php")
 {
 	header("Location:../index.php");
 	die("");
-}*/
+}
 ?>
 <html>
 
-<link rel="stylesheet" type="text/css" href="../css/profil.css"/>
+<link rel="stylesheet" type="text/css" href="css/profil.css"/>
 
-<script  type="text/javascript" src="../js/jquery-3.6.0.min.js"> </script>
-<script src="../js/profil.js">
+<script  type="text/javascript" src="js/jquery-3.6.0.min.js"> </script>
+<script src="js/profil.js">
 </script>
 
 
