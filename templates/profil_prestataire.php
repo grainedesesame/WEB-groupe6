@@ -1,15 +1,22 @@
 <?php
 // Si la page est appelée directement par son adresse, on redirige en passant pas la page index
-if (basename($_SERVER["PHP_SELF"]) != "index.php")
+/*if (basename($_SERVER["PHP_SELF"]) != "index.php")
 {
 	header("Location:../index.php");
 	die("");
-}
+}*/
 ?>
+<html>
 
-<link rel="stylesheet" type="text/css" href="css/profil.css"/>
+<link rel="stylesheet" type="text/css" href="../css/profil.css"/>
+
+<script  type="text/javascript" src="../js/jquery-3.6.0.min.js"> </script>
+<script src="../js/profil.js">
+</script>
 
 
+
+<h1>Mon profil</h1>
 <div id="remplissage" class="intercalaire">
     <div id="coord" class="marquepage" onclick="afficherProfil();">
         Mes coordonnées
@@ -17,10 +24,9 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
     <div id="proj" class="marquepage" onclick="afficherProjets();">
         Mes projets
     </div>
+    <div id="htmlremplissage">
+    </div>
 </div>
-
-<h1>Mon profil</h1>
-
 <div id="coordonnees" class="intercalaire">
   <h2>
     Mes coordonnées
@@ -42,8 +48,9 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
   <input id="password" type="password" />
 </div>
 
-<div id="projet" class="intercalaire">
+<div id="projets" class="intercalaire">
   // ensemble des projets
 </div>
 
 <input type="submit" value="Enregistrer les modifications">
+</html>
